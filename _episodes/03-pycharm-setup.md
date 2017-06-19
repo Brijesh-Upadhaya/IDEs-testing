@@ -83,11 +83,7 @@ try using the following key combination to find the function desired:
 
 ## Setup & intro
 
-```shell
-$ git clone https://github.com/coderefinery/IDEs.git
-```
-now press key combination:
-
+Use
 <table style="width:100%;">
   <tr>
     <th style="text-align: center; border: 1px solid black; padding: 3px; width:50%"> Action </th>
@@ -101,7 +97,10 @@ now press key combination:
   </tr>
 </table>
 
-and start typing **Open**, find and import pulled project. Once the project is loaded let's look around, there are several working areas of the window or panes (list of them can also be found by **View -> Tool Windows -> ...**):
+and start typing **Checkout from Version Control**, and choose git.
+
+Check out the source code for this repository from
+https://github.com/coderefinery/IDEs-testing and open it in a new window.
 
 - project
 - code

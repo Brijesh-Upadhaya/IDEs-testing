@@ -49,9 +49,9 @@ Let's start by finding the example exercise for this part. In the IDE do:
     <td style="text-align: center; border: 1px solid black; padding: 3px;"> ⌘ ⇧ A  </td>
   </tr>
 </table>
-  
+
 and find **Go To Class**. Once the key combination is known, use it to open the [exercise script]({{site.baseurl}}/exercise.py). It's almost empty, so let's create a simple **_main()_** function... start typing **_mai_**
-  
+
 ```python
 mai
 ```
@@ -68,16 +68,16 @@ if __name__ == '__main__':
 ```
 
 we are now missing the function itself. instead of manually typing it in, put a cursor on underlined in red word **_main()_** and **Show Intention Actions ...** select **create function _main()_** from the options
-  
+
 <table style="width:100%;">
   <tr>
     <th style="text-align: center; border: 1px solid black; padding: 3px; width: 50%"> Action </th>
-    <th style="text-align: center; border: 1px solid black; padding: 3px; width: 25%"> Win/Lin keys </th> 
+    <th style="text-align: center; border: 1px solid black; padding: 3px; width: 25%"> Win/Lin keys </th>
     <th style="text-align: center; border: 1px solid black; padding: 3px; width: 25%"> Mac keys </th>
   </tr>
   <tr>
     <td style="text-align: center; border: 1px solid black; padding: 3px;"> Goto Class </td>
-    <td style="text-align: center; border: 1px solid black; padding: 3px;"> Ctrl + N </td> 
+    <td style="text-align: center; border: 1px solid black; padding: 3px;"> Ctrl + N </td>
     <td style="text-align: center; border: 1px solid black; padding: 3px;"> ⌘ O </td>
   </tr>
   <tr>

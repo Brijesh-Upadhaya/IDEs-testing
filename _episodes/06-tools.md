@@ -1,6 +1,6 @@
 ---
 layout: episode
-title: "Tools"
+title: "Testing tools"
 teaching: 15
 exercises: 0
 questions:

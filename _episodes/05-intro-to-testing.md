@@ -142,21 +142,22 @@ has been preserved.
 
 Typical steps in creating a feature
 
-#1 It works
-#2 You had to change everything to make it testable but now the tests pass and
+1. It works
+2. You had to change everything to make it testable but now the tests pass and
 it works
-#3 [time passes]
-#4 You discover you can reuse part of the code with small modifications for
-another feature
-#5 The tests help you know you haven't broken old functionality in the
+3. [time passes]
+4. You discover you can reuse part of the code with small modifications for
+another feature (possibly by applying the rule of three)
+5. The tests help you know you haven't broken old functionality in the
 refactor
 
 ## Tests make it more difficult to add code smells
 
 - Some things are difficult to test
-- E.g. side-effects like printing things to stdout in the middle of a
-  fucntion are typically cumbersome
-- They are often cumbersome by design so that the extra effort would guide you
+  - side-effects like printing things to stdout
+  - needless state
+  - long functions that carry the weight of the world
+- They are often cumbersome to test by design so that the extra effort would guide you
   to avoid side-effects where they do not belong and keep your code functional
   where it can be
 
@@ -215,10 +216,14 @@ Imperfect tests run frequently are better than perfect tests which are never wri
 
 - Unit tests are functions ([Testing and Continuous Integration with Python](http://katyhuff.github.io/python-testing/))
 - Test one unit: module or even single function
+- Tested unit is typically tested in isolation, broken lower level code should
+  not fail a higher level unit test
 - Help to sharpen interfaces by identifying dependencies
 - Speed up testing
 - Good documentation of the capability and dependencies of a module
 - In fact it is a documentation that is up to date by definition
+- Where state can't be avoided, many tests can share the same setup and teardown
+  functionality to minimize coder effort
 
 ---
 
@@ -229,6 +234,16 @@ Imperfect tests run frequently are better than perfect tests which are never wri
 - Unit tests can be used for testing independent components (e.g. engine, radiator, transmission) and integration tests to check if car is working overall
 - Essential for having adequate testing
 - An imperfect integration test is better than no integration test at all
+
+An important concept related to integration tests are *fixtures*. A fixture is
+a dataset that is loaded for tests that is either designed to be typical or
+the minimal possible. A user fixture might contain an admin, a regular user
+and a banned user and all tests would test feature as one of the three known
+users.
+
+Fixtures help others reason about individual tests and help everyone
+communicate about what is going wrong. Also they reduce the time to create new
+tests to existing systems.
 
 ---
 ## Test-driven development
@@ -253,6 +268,7 @@ Imperfect tests run frequently are better than perfect tests which are never wri
 - Hopefully with numerical tolerance
 - Typically we need both unit and functionality regression tests
 - Both are no guarantee that the code is correct "always"
+- If you encounter a bug, add it as a test case!
 
 Tests are no guarantee ([@dave1010](https://twitter.com/dave1010/status/613601365529657344)):
 
@@ -302,7 +318,7 @@ Tests are no guarantee ([@dave1010](https://twitter.com/dave1010/status/61360136
 
 ## Continuous integration
 
-- Test each commit (push) on every branch
+- Test each commit (or push) on every branch
 - Makes it possible for the mainline maintainer to see whether a modification
   breaks functionality before accepting the merge
 
@@ -322,5 +338,5 @@ Tests are no guarantee ([@dave1010](https://twitter.com/dave1010/status/61360136
 - Make testing easy to run (`make test`)
 - Make testing easy to analyze
     - Do not flood screen with pages of output in case everything runs OK
-    - Test with numerical tolerance (extremely annoying to compare digits by eye)
+    - Test floating point arithmetic with numerical tolerance (extremely annoying to compare digits by eye)
 
