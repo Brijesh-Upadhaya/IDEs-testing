@@ -1,20 +1,28 @@
 ---
 layout: episode
-title: "Exercise: Automatic testing with Travis CI and Coveralls"
+title: "Exercise: Creating a new project with Travis CI and Coveralls"
 teaching: 0
-exercises: 40
+exercises: 30
 questions:
-  - "How can we implement automatic testing each time we push changes to the repository?"
-  - "Why is it good to autoclose issues with commit messages?"
+  - "So I need to start from scratch, how do I do that?"
 objectives:
-  - "Get comfortable with Travis and Coveralls and experience a full-cycle collaborative workflow."
+  - "Get experience setting up Travis and Coveralls and experience a full-cycle collaborative workflow."
 keypoints:
   - "This example was using Python but you can achieve the same automation for Fortran or C or C++."
 ---
 
-## Exercise a full-cycle collaborative workflow
+## Motivation
 
-We will do this exercise in pairs.
+Most developers start by contributing to software projects set up by others.
+It's possible to graduate with a degree in Computer Science having only set up
+one or two repositories from scratch.
+
+Setting up a project is not rocket science but the problem of an empty canvas.
+Most projects are set up using the settings from an existing one and modifying
+the settings to suit the current project. This exercise aims to let you do the
+first step so that the next one will be easier..
+
+## Exercise a full-cycle collaborative workflow
 
 Here is an overview of this exercise. Below we detail the steps.
 

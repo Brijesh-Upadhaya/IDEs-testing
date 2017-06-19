@@ -1,5 +1,5 @@
-fork_me_ribbon_url: https://github.com/coderefinery/IDEs
-title: "Lesson on automated IDE (PyCharm)"
+fork_me_ribbon_url: https://github.com/coderefinery/IDEs-testing
+title: "Lesson on IDE (PyCharm) and testing (pytest)"
 start_time: 780  # 13:00
 
 # where things are
