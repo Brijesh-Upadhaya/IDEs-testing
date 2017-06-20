@@ -24,9 +24,10 @@ Most developers start working by contributing to existing projects. The toy
 project in this exercise is designed to be a barebones minimal of an open
 source project.
 
-## Check out repository and set up prerequisites
+## Fork and clone repository and set up prerequisites
 
-Clone the project at https://github.com/coderefinery/cr-ide-test .
+Fork the project at https://github.com/coderefinery/cr-ide-test to your own
+GitHub account.
 
 Either use the [VirtualEnv [7]]({{site.baseurl}}/03-features/#virtualenv-7)
 feature to create a virtual enviroment or just install the libraries needed in
@@ -95,16 +96,16 @@ edit an existing that fails if the bug is re-introduced at a later date.
 {: .challenge :}
 
 
-### Create a fork
+### Push changes and make a PR
 
-Now create your own fork of the repository, add that fork as a remote and push
-your feature branch to your fork. Create a pull request to the main repository
-master branch. All the concepts should be familiar but now the trick is to
-find how to do that in an IDE.
+Commit your changes to a branch other than `master` and push to your fork.
+Create a pull request to the main repository master branch. All the concepts
+should be familiar but now the trick is to find how to do that in an IDE.
 
-### Update your master
+### Add upstream
 
-Check out your master branch and pull from origin to reflect the new changes.
+Add the original repository as a new remote and pull the changes to your local
+master. Push your local master to your fork master as well.
 
 In this exercise all the branches were mutually exclusive and your changes are
 no longer relevant to the main method. In a normal software development
@@ -159,9 +160,9 @@ help with e.g. names of functions as mocker parameters.
 > {: .solution :}
 {: .challenge :}
 
-### Update your master
+### Update from upstream
 
-Update the master branch after a version of changes have been merged.
+Again fetch changes from upstream and push them to your local repo.
 
 ## Caesar Ciphers
 
@@ -185,7 +186,7 @@ correctly translated with rot-15. You will find that the method has a bug.
    it's supposed to be used internal to the module.)
 4. (time permitting) could you refactor the tests for rot13 and rot15 use a
    mock instead of the \_lookup function? should you?
-5. Push to your fork and PR
+5. Branch, commit, push and PR
 
 <table width="100%">
   <tr>
