@@ -28,6 +28,9 @@ source project.
 
 Clone the project at https://github.com/coderefinery/cr-ide-test .
 
+**EDIT: pytest and mock are already part of your Anacoda, pytest-mock is not. Skip the below if you already
+have Anacoda installed**
+
 Either use the [VirtualEnv [7]]({{site.baseurl}}/03-features/#virtualenv-7)
 feature to create a virtual enviroment or just install the libraries needed in
 this example to your global python installation using `pip install --user`.
